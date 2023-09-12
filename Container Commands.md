@@ -46,3 +46,7 @@ docker kill nginx
 ```
 docker kill apache
 ```
+### Microk8s install:
+```
+sudo snap install microk8s --classic
+```
