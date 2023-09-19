@@ -50,7 +50,3 @@ docker kill apache
 ```
 sudo snap install microk8s --classic
 ```
-### Installing nginx:
-```
-apt install nginx
-```
