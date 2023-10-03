@@ -1,9 +1,4 @@
 # Docker Install
-
-## Quick Install:-
-```
-curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
-```
 ### Install Packages:
 ```
 sudo apt update
