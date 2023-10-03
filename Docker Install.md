@@ -32,7 +32,8 @@ sudo usermod -aG docker $USER
 ### Download the Current Stable Release of Docker Compose:
 ```
 COMPOSE_VERSION=$(curl -s "https://api.github.com/repos/docker/compose/tags" | jq -r '.[0].name')
-sudo curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \ o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" \
+  -o /usr/local/bin/docker-compose
 ```
 ### Apply Executable Permissions to the Binary:
 ```
