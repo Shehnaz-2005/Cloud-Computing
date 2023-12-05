@@ -50,7 +50,7 @@ resources available on demand. It provides various kinds of services like Infras
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/e02d1949-1e32-4c7d-8abc-a1698892bf30)
 
-## Some major domains that AWS provides its services in:
+# Some major domains that AWS provides its services in:
 - Compute: Used to process data on the cloud by making use of powerful processors which serve multiple instances at a time.
 - Storage and Content Delivery: Storage services are used to store data in the cloud, content delivery on the other hand is used to cache data nearer to the user so as to provide low latency.
 - Database: Database domain is used to provide reliable relational and non-relational database instances managed by AWS.
@@ -59,7 +59,7 @@ resources available on demand. It provides various kinds of services like Infras
 - Security and Identity: Services for user authentication or limiting access to a certain set of audience on your AWS resources.
 - Application Services: Simple services like notifications, emailing and queuing come under application services.
 
-## Compute Services:
+# Compute Services:
 - Amazon EC2(Elastic Compute Cloud)
   1) allows users to rent virtual computers to run their own computer applications
   2) uses EBS and instance storage to store data
@@ -96,7 +96,7 @@ instance failure.
 - AWS Outposts
 - VMware Cloud on AWS
 
-## Using Amazon Load Balancer:
+# Using Amazon Load Balancer:
 
 **Subnetworking(Subnetting)** : Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination.
 
@@ -135,7 +135,7 @@ instance failure.
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/b2fedd67-b269-4899-a56e-ce326ed2af0a)
 
-## Storage Services:
+# Storage Services:
 - Amazon S3(Simple Storage Service) - An object storage service where storage is done in chunks of data called buckets. Necessary authentications and authorisations can be applied for security.
    - Object Storage: A preformatted space to simply store files, movies, songs, etc.
    - S3 provides object storage with durability of 99.9999999% .ie. if 10 million objects are stored, an average of one object will be lost every 10,000 years.
@@ -155,7 +155,7 @@ instance failure.
 - Amazon FSx for Windows File Server
 - AWS Storage Gateway
 
-## Network Services:
+# Network Services:
 - Amazon VPC(Virtual Private Cloud) - A service that provides a virtual private cloud by provisioning a logically isolated section of AWS Cloud
 - Amazon Route 53 - Amazon's Domain Name System
    1) DNS converts URL to IP address and vice versa
@@ -169,7 +169,3 @@ instance failure.
 - AWS App Mesh
 - AWS Cloud Map
 - Elastic Load Balancing
-
-
-
-
