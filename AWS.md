@@ -117,19 +117,21 @@ instance failure.
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/bcdd8e2d-7e9c-4b9b-bec6-f092f508242a)
 
-![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/057aced2-e040-4d1a-9e64-cc81b395ee53)
+
   
 - Target groups route requests to individual registered targets, such as EC2 instances, using the protocol and port number that you specify.
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/f5d3c15d-6689-4634-9832-e39f46d08c4b)
 
 
-- If the load balancer is not receiving any traffic we need to averride to a static port that makes the health check on that particular port instead of waiting for a request to come.
+- If the load balancer is not receiving any traffic we need to override to a static port that makes the health check on that particular port instead of waiting for a request to come.
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/1945cd56-df5f-4424-adff-601c8a1ff0a1)
 
-HTTP response codes: Codes starting with 4xx is client side error and 5xx type errors are server side error. 301 or 302 mean temporary or permanent redirection. 200 is the success code. ie. if everything is working fine.
+- HTTP response codes: Codes starting with 4xx is client side error and 5xx type errors are server side error. 301 or 302 mean temporary or permanent redirection. 200 is the success code. ie. if everything is working fine.
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/a1238a13-4f15-49f2-b688-fd312947633c)
+
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/057aced2-e040-4d1a-9e64-cc81b395ee53)
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/b2fedd67-b269-4899-a56e-ce326ed2af0a)
 
