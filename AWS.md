@@ -67,6 +67,25 @@ resources available on demand. It provides various kinds of services like Infras
   4) Types of EC2 instances- c type(for CPU intensive tasks), m type(for general purposes, balanced CPU and RAM), t type(for optimize usage of CPU and RAM, burst type instance), r type(for RAM intensive tasks), d type(Huge instance store), i type(Fastest Input Output Operations per second provider)
 - Amazon Elastic Container Service(ECS) and Amazon Elastic Kubernetes Service(EKS) - Container orchestration services
 - AWS Lambda- A serverless compute service that lets you run code for virtually any type of application without provisioning or managing servers.
+- Elastic Load Balancing(ELB)
+1) Load Balancer: It is a virtual machine or appliance that balances your web application load that could be http or https traffic that you are getting in. It balances a load of multiple web servers so that no web server crashes. A web server can also be consumed as a load balancer and web servers can do virtual hosting.
+
+**Virtual Hosting**- A method for hosting multiple domain names on a single server. Eg: An apache web server can be used to deploy multiple applications/websites on different ports and works on layer 7.
+
+**Proxy Servers**- It is a server that sits in front of one or more web servers, intercepting requests between users and the internet.
+ - Forward proxy - Traffic flows from a client to the internet through a proxy server hence it accepts requests from the client.
+ - Reverse proxy - Traffic flows from the internet to a web server through a proxy server hence it accepts requests from the internet servers.
+
+<img src="https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/7a1704a3-ba0b-4c57-8dd2-0b306c7ace86" width = "500" height = "500">
+
+
+2) ELB automatically manages the workload on your instances and distributes them to other instances in case of an
+instance failure.
+
+3) There are three types of load balancers:
+     a) Classic Load Balancer - works on both layer 7 and 4
+     b) Application Load Balancer - works on layer 7(application layer), supports path based virtual hosting
+     c) Network Load Balancer - works on layer 4(network layer), supports port based virtual hosting
 - Amazon Elastic Container Registry
 - Amazon EC2 Auto Scaling
 - Amazon Lightsail
@@ -76,6 +95,34 @@ resources available on demand. It provides various kinds of services like Infras
 - AWS Serverless Application Repository
 - AWS Outposts
 - VMware Cloud on AWS
+
+## Using Amazon Load Balancer:
+
+**Subnetworking(Subnetting)** : Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination.
+
+**Public subnet** : Can receive traffic from outerworld.
+
+**Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld.
+
+**Security Group** : A firewall for the resources on which it is attached which controls port based traffic. It can allow incoming traffic on a specific port as well as block incoming traffic from a specific port. 
+
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/a843eaf3-26fa-4456-9beb-ffb0fb57ebfb)
+
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/e9ca0860-7484-4b22-af42-40ec22e6a0b8)
+
+
+**Traffic Port** : A certain port on which the load balancer is already receiving traffic.
+
+- Target groups route requests to individual registered targets, such as EC2 instances, using the protocol and port number that you specify.
+- Load balancer routes the traffic to a target group which routes the traffic to a backend ec2 instances/ip address.
+- If the load balancer is not receiving any traffic we need to averride to a static port that makes the health check on that particular port instead of waiting for a request to come.
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/1945cd56-df5f-4424-adff-601c8a1ff0a1)
+
+HTTP response codes: Codes starting with 4xx is client side error and 5xx type errors are server side error. 301 or 302 mean temporary or permanent redirection. 200 is the success code. ie. if everything is working fine.
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/bcdd8e2d-7e9c-4b9b-bec6-f092f508242a)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/057aced2-e040-4d1a-9e64-cc81b395ee53)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/f5d3c15d-6689-4634-9832-e39f46d08c4b)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/b2fedd67-b269-4899-a56e-ce326ed2af0a)
 
 ## Storage Services:
 - Amazon S3(Simple Storage Service) - An object storage service where storage is done in chunks of data called buckets. Necessary authentications and authorisations can be applied for security.
@@ -111,3 +158,7 @@ resources available on demand. It provides various kinds of services like Infras
 - AWS App Mesh
 - AWS Cloud Map
 - Elastic Load Balancing
+
+
+
+
