@@ -208,14 +208,40 @@ seq 9999999999 > /dev/null &
 # Network Services:
 - Amazon VPC(Virtual Private Cloud) - A service that provides a virtual private cloud by provisioning a logically isolated section of AWS Cloud
 
+### VPC Concepts: 
+
+1) NACL(Network Access Control List): One of the three security services among security groups and route tables.
+    - Security group: Directly attached to the instance. Stateful .ie. traffic which comes in has a way to go out.
+    - NACL: Attached to a subnet. Stateless .ie. traffic which comes in may or may not go out depending on whether the outbound path is        open or not.
+    - Route Table: Attached to the complete VPC.
+
+2) VPC Peering: Connection between two different VPCs privately, similar to VPN.
+   
+3) VPC Endpoints: Connects two different services privately where one is private and the other one may be private/public.
+   
+4) VPC PrivateLink: Privately connects to a service in a 3rd party VPC. Eg: If customer and provider kind of relationship has to be established.
+   
+5) VPC Flow Logs: To enable network packet related tracking inside and outside VPC
+    
+6) Site to site VPN: To establish VPN between AWS VPC and on-premises Data Centre
+    
+7) Client VPN/Open VPN: Makes sure that data transfer between target and host is encrypted
+    
+8) Direct Connect: Direct private physical connection between data centre and AWS VPC
+    
+9) Transit Gateway: Connects thousands of VPCs and on-premises networks together
+    
+ 
+**Internet Gateway** : Virtual router that enables communication between VPC and the internet.
+
+**NAT(Network Address Translation) Gateway** : An AWS service that allows instances in a private subnet to access the internet and connect to services outside the VPC. Only allows outbound access. 
 
 **Subnetworking(Subnetting)** : Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination. When we add internet gateway to a subnet it becomes a public subnet.
 
 **Public subnet** : Can receive traffic from outerworld. 
 
-**Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld.
-![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/17c8e436-28eb-4c8a-8a24-e7b1f42600db)
-![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/a1257a0d-a603-4359-ad24-55623a1983b1)
+**Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld while remaining private.
+
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/05552438-fff7-491f-bea7-4aa611252c9b)
 
 
@@ -230,6 +256,5 @@ seq 9999999999 > /dev/null &
 - AWS Transit Gateway
 - AWS App Mesh
 - AWS Cloud Map
-
 
 
