@@ -187,3 +187,17 @@ instance failure.
 - AWS App Mesh
 - AWS Cloud Map
 - Elastic Load Balancing
+
+
+Rough steps:
+create an instance with security grp using my ip on amazon linux
+start a session using putty by typing host name as ec2-user@publicipoftheinstance
+install nginx and start it using these commands: sudo bash, yum update, yum install nginx, service nginx start, netstat -ntlp
+create a target group and attach that ec2 instance behind this target group.
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/db1e5b7d-ef1c-4f78-9fb8-2d2cca7773fb)
+open ip adress of the instance- welcome page of nginx should be displayed if not- write telnet ipaddress of instance 80 on cmd and try again
+Now create load balancer with same security group and availibility zone of the instance and one more random availiility zone.
+Check target group, if no traffic is flowing override on port 80. Now the healthcheck should be healthy.
+Then open the domain name of the load balancer and welcome page of nginx should appear again.
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/d1f75634-19ac-41b4-8039-c94318bdce9c)
+
