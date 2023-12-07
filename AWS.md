@@ -116,12 +116,6 @@ instance failure.
 
 # Using Amazon Load Balancer:
 
-**Subnetworking(Subnetting)** : Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination.
-
-**Public subnet** : Can receive traffic from outerworld.
-
-**Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld.
-
 **Security Group** : A firewall for the resources on which it is attached which controls port based traffic. It can allow incoming traffic on a specific port as well as block incoming traffic from a specific port. 
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/a843eaf3-26fa-4456-9beb-ffb0fb57ebfb)
@@ -155,9 +149,41 @@ instance failure.
 
 ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/6d1aaa0b-dcc1-49be-8142-c9189eac1ca6)
 
+# Using Amazon Auto Scaling:
 
+Auto Scaling components:
+- Auto Scaling Groups
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/874260ae-a699-4a2a-90ea-4fff11749522)
 
+- Launch template: Template for new instances
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/d70ab055-0a52-4811-a5d2-0ed953c1db63)
 
+- CloudWatch alarms: Triggered when a particular state occurs(eg: 80% resources are utilised) and sends notifications on that basis through SNS(Simple Notification Service)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/cf335320-e3a3-4f17-9225-f8fd9ed90d67)
+
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/b72f9ac2-48b8-4921-8d00-0300200b7952)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/1b3246f2-0eaf-4efc-a012-c1e5829c88ce)
+
+- Scaling Policies
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/2ae6de8d-eb71-4226-b435-40ef3c9dd1db)
+
+- CPU utilisation before
+```
+top
+```
+  ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/c6ca2a01-7ba0-4f27-91d1-c01b57604bb8)
+
+- Generating Artificial Load
+```
+seq 9999999999 > /dev/null &
+```
+- CPU utilisation after the load
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/0f319f70-ce05-439d-bfa2-f6d2623f3089)
+
+- Instance created by auto scaler
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/96e1bdab-d1aa-412e-9ebe-98e3337d0338)
+
+**Note** - Opening the IP adress of any of the instance and reloading the page will show different instances using Round Robin.
 
 # Storage Services:
 - Amazon S3(Simple Storage Service) - An object storage service where storage is done in chunks of data called buckets. Necessary authentications and authorisations can be applied for security.
@@ -181,6 +207,18 @@ instance failure.
 
 # Network Services:
 - Amazon VPC(Virtual Private Cloud) - A service that provides a virtual private cloud by provisioning a logically isolated section of AWS Cloud
+
+
+**Subnetworking(Subnetting)** : Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination. When we add internet gateway to a subnet it becomes a public subnet.
+
+**Public subnet** : Can receive traffic from outerworld. 
+
+**Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld.
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/17c8e436-28eb-4c8a-8a24-e7b1f42600db)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/a1257a0d-a603-4359-ad24-55623a1983b1)
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/05552438-fff7-491f-bea7-4aa611252c9b)
+
+
 - Amazon Route 53 - Amazon's Domain Name System
    1) DNS converts URL to IP address and vice versa
    2) DNS works on port number 53
@@ -192,6 +230,6 @@ instance failure.
 - AWS Transit Gateway
 - AWS App Mesh
 - AWS Cloud Map
-- Elastic Load Balancing
+
 
 
