@@ -231,7 +231,6 @@ seq 9999999999 > /dev/null &
     
 9) Transit Gateway: Connects thousands of VPCs and on-premises networks together
     
- 
 **Internet Gateway** : Virtual router that enables communication between VPC and the internet.
 
 **NAT(Network Address Translation) Gateway** : An AWS service that allows instances in a private subnet to access the internet and connect to services outside the VPC. Only allows outbound access. 
@@ -242,19 +241,17 @@ seq 9999999999 > /dev/null &
 
 **Private subnet** : Cannot receive traffic from outerworld but may or may not send traffic to outerworld while remaining private.
 
-![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/05552438-fff7-491f-bea7-4aa611252c9b)
-
-
 - Amazon Route 53 - Amazon's Domain Name System
    1) DNS converts URL to IP address and vice versa
    2) DNS works on port number 53
-- AWS Direct Connect - 
+    
 - Amazon CloudFront
-- AWS Private Link
 - AWS Global Accelerator
 - Amazon API Gateway
 - AWS Transit Gateway
 - AWS App Mesh
 - AWS Cloud Map
 
-
+# Database Services:
+## SQL databases: Good at transaction and concurrency control. Eg: MYSQL, Maria DB, Oracle, Aurora clusters, etc.
+## Non-SQL databases: Fastest databases. Eg: Dynamo DB, Docu DB, etc.
