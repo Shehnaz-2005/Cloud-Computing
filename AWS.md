@@ -98,9 +98,9 @@ instance failure.
   
   b) Dynamic Scaling - The capacity of autoscaling environment scales automatically as traffic change occurs.
     
-     1) Simple/ Step Scaling -
+     1) Simple/ Step Scaling - The process of adding an instance when the load increases beyond a set threshold and to delete an instance when load falls below a set threshold.
      
-     2) Target Tracking Scaling -
+     2) Target Tracking Scaling - Maintaining certain threshold for the capacity of autoscaling environment. Eg: To keep an average of 50% CPU utilisation, when the utilisation goes beyond 50% another instance is created but in a way the utilisation remains close to 50% in the first instance.
      
      3) Scheduled Scaling - Generally used for predictable loads. Pre-warming is done so that the autoscaling environment scales at scheduled intervals.
 
