@@ -84,22 +84,27 @@ instance failure.
 
 3) There are three types of load balancers:
      a) Classic Load Balancer - works on both layer 7 and 4. It routes the traffic between clients and backend servers based on IP address.
+   
      b) Application Load Balancer - works on layer 7(application layer), supports path based virtual hosting. It is best suited for load balancing of HTTP and HTTPs traffic.
+   
      c) Network Load Balancer - works on layer 4(network layer), supports port based virtual hosting. It is best suited for load balancing the TCP traffic when high performance is required.
 
 **Note** - The Layer 4 load balancing can also be used for applications that rely purely on the TCP protocol.
 
 - Amazon Elastic Container Registry
 - Amazon EC2 Auto Scaling: It is used to scale up and down automatically as and when required. It can create and terminate instances automatically.
-  1) Manual Scaling - We can update the capacity of autoscaling environment by ourselves.
-  2) Dynamic Scaling - The capacity of autoscaling environment scales automatically as traffic change occurs.
-     a) Simple/ Step Scaling -
+  
+  a) Manual Scaling - We can update the capacity of autoscaling environment by ourselves.
+  
+  b) Dynamic Scaling - The capacity of autoscaling environment scales automatically as traffic change occurs.
+    
+     1) Simple/ Step Scaling -
      
-     b) Target Tracking Scaling -
+     2) Target Tracking Scaling -
      
-     c) Scheduled Scaling - Generally used for predictable loads. Pre-warming is done so that the autoscaling environment scales at scheduled intervals.
+     3) Scheduled Scaling - Generally used for predictable loads. Pre-warming is done so that the autoscaling environment scales at scheduled intervals.
 
-**Pre-warming** - The process of preparing a load balancer for a surge in traffic. It involves initializing services so they are ready to receive requests. Eg: Classic load balancers scales slowly so in order to cater spiky loads, it is pre-warmed by generating some artificial load so that it remains scaled up for the time of need. 
+**Pre-warming** - The process of preparing a load balancer for a surge in traffic. It involves initializing services so that they are ready to receive requests. Eg: Classic load balancers scale slowly so in order to cater spiky loads, it is pre-warmed by generating some artificial load so that it remains scaled up for the time of need. 
 
 - Amazon Lightsail
 - AWS Batch
