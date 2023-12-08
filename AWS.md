@@ -244,8 +244,23 @@ seq 9999999999 > /dev/null &
 - Amazon Route 53 - Amazon's Domain Name System
    1) DNS converts URL to IP address and vice versa
    2) DNS works on port number 53
+      
+   ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/f02fea80-98e0-4094-a3c9-7f7ffd14fedc)
+
     
-- Amazon CloudFront
+- Amazon CloudFront - Amazon's content delivery network
+   1) Used for those applications whose users are spread acrosss the world
+      
+   3) Content is cached at the edge locations to reduce latency
+      - **Edge location** is a data center that stores large data files near where users access AWS services. 216 edge locations are               available.
+   4) Protection from DDoS(Distributed Denial of Service) attack with AWS shield
+      
+   5) CloudFront Geo-restrictions- Allow or deny users from approved or banned countries respectively
+
+- AWS CloudFormation
+  
+  ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/3b037e1a-ae04-4714-843a-8b99ba3df64d)
+
 - AWS Global Accelerator
 - Amazon API Gateway
 - AWS Transit Gateway
@@ -259,4 +274,30 @@ seq 9999999999 > /dev/null &
 ## AWS CLI
 - To interact with AWS services using commands in command line shell
 - It is open source and an alternative to AWS management console
-- It is built on AWS SDK(Software Development Kit) for Python
+- Has direct access to public APIs
+- Built on AWS SDK for Python .ie. boto or boto code
+    - SDKs are Software Development Kits
+    - They are used to develop and deploy applications on AWS using various languages
+    ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/80ca94fc-5fc6-45ed-b259-27b3b797901b)
+
+# Using AWS CLI (on Cloudshell)
+- Create Access Key
+
+  ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/28fef715-6d32-4fa9-be42-d8cced67651b)
+
+```
+aws configure
+```
+- Enter access key, secret key, region name and output format to get started
+- Create an instance and run-
+  ```
+  aws ec2 describe-instances
+  ```
+![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/e5bdc517-140e-42fd-bb16-ccd4e211cd1b)
+
+# Docker Containers
+- Containers are like virtual machines that use the kernel of their host OS
+- Cgroups- Allows control and enforcement of resources in virtual machines over a hypervisor. Eg: If a VM is allocated 2GB RAM cgroups     make sure that only 2GB is allocated to the VM and that it does not use more RAM from the host OS. 
+- Namespaces- Set of characteristics which enables a VM to be a whole entity.
+  
+  ![image](https://github.com/Shehnaz-2005/Cloud-Computing/assets/142916147/5f60ddc9-ba7c-41d6-8445-2840e4c227d3)
