@@ -61,3 +61,4 @@
     ```
     ls -lrt
     ```
+  - Now open the Public IP of the instance to see the website 
