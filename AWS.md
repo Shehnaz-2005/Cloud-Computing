@@ -255,3 +255,8 @@ seq 9999999999 > /dev/null &
 # Database Services:
 - SQL databases: Good at transaction and concurrency control. Eg: MYSQL, Maria DB, Oracle, Aurora clusters, etc.
 - Non-SQL databases: Fastest databases. Eg: Dynamo DB, Docu DB, etc.
+
+## AWS CLI
+- To interact with AWS services using commands in command line shell
+- It is open source and an alternative to AWS management console
+- It is built on AWS SDK(Software Development Kit) for Python
