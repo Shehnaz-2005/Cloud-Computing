@@ -253,5 +253,5 @@ seq 9999999999 > /dev/null &
 - AWS Cloud Map
 
 # Database Services:
-## SQL databases: Good at transaction and concurrency control. Eg: MYSQL, Maria DB, Oracle, Aurora clusters, etc.
-## Non-SQL databases: Fastest databases. Eg: Dynamo DB, Docu DB, etc.
+- SQL databases: Good at transaction and concurrency control. Eg: MYSQL, Maria DB, Oracle, Aurora clusters, etc.
+- Non-SQL databases: Fastest databases. Eg: Dynamo DB, Docu DB, etc.
